@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if title%}
+    <title>Django Blog -{{title}}</title>
+  {% else %}
+    <title>Django Blog</title>
+  {% endif %}
+
+</head>
+<body>
+  
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+  {% block content%} {% endblock %}
+  
+</body>
+</html>

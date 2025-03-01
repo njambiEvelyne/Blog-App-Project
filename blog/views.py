@@ -28,5 +28,5 @@ def hello(request):
   return HttpResponse('<h3>Welcome to the website</h3>')
 
 def about(request):
-  return render(request, template_name= 'blog/about.html')
+  return render(request, 'blog/about.html', {'title': 'About'})
 
