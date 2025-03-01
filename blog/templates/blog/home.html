@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog | Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Blog</h1>
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <p>Stay tuned for exciting blog posts!</p>
+  {% for post in posts %}
+    <h1>{{post.title}}</h1>
+    <p>{{ post.author}} on {{post.date_posted}}</p>
+    <p>{{post.content}}</p>
+  {% endfor %}
+
+</body>
+</html>
