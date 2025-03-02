@@ -1,26 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Posts
 
 # Dummy data to be accessed by thetemplate
-posts = [
-
-  {
-    'author': 'CoreyMS',
-    'title' :'Blog-post 1',
-    'content':'First post content',
-    'darte_posted': 'August 27, 2018'
-  },
-  {
-    'author': 'Jane Doe',
-    'title' :'Blog-post 2',
-    'content':'Second post content',
-    'darte_posted': 'August 28, 2018'
-  }
-]
 
 def home_message (request):
   context = {
-    'posts': posts
+    'posts': Posts.objects.all()
   }
   return render(request, 'blog/home.html', context)
 
